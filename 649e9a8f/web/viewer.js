@@ -545,20 +545,6 @@
 					t = document.documentElement;
 				e = !!(t.requestFullscreen || t.mozRequestFullScreen || t.webkitRequestFullScreen || t.webkitCurrentFullScreenElement || t.msRequestFullscreen), 
                 !1 !== document.fullscreenEnabled && !1 !== document.mozFullScreenEnabled && !1 !== document.webkitFullscreenEnabled && !1 !== document.webkitCurrentFullScreenElement && !1 !== document.msFullscreenEnabled || (e = !1), (0, u.shadow)(this, "supportsFullscreen", e)
-                
-                console.log('requestFullscreen', t.requestFullscreen);
-                console.log('mozRequestFullScreen ', t.mozRequestFullScreen);
-                console.log('webkitRequestFullScreen ', t.webkitRequestFullScreen);
-                console.log('webkitCurrentFullScreenElement ', t.webkitCurrentFullScreenElement);
-                console.log('msRequestFullscreen ', t.msRequestFullscreen);
-                console.log('requestFullscreen ', t.requestFullscreen);
-
-                console.log('documentfullscreenEnabled ', document.fullscreenEnabled);
-                console.log('documentmozFullScreenEnabled ', document.mozFullScreenEnabled);
-                console.log('documentwebkitFullscreenEnabled ', document.webkitFullscreenEnabled);                
-                console.log('documentmsFullscreenEnabled ',document.msFullscreenEnabled);
-
-                console.log('documentwebkitCurrentFullScreenElement ', document.webkitCurrentFullScreenElement);
 
                 return e;
 			},
@@ -951,9 +937,6 @@
 		var e, t = M.appConfig,
 			n = document.location.search.substring(1),
 			i = (0, s.parseQueryString)(n);
-
-		console.log('M', M);
-		console.log('supportsFullscreen', M.supportsFullscreen);
 
 		e = "file" in i ? i.file : h.AppOptions.get("defaultUrl"), N(e);
 		var r = document.createElement("input");

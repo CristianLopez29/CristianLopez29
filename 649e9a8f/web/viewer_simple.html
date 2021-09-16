@@ -61,14 +61,10 @@ See https://github.com/adobe-type-tools/cmap-resources
             var presentation__mode = document.getElementById("presentationMode");
             presentation__mode.classList.remove("hidden");
             presentation__mode.classList.remove("hiddenLargeView");
-        },1600);
-        
-        setTimeout(function(){
-            var presentation__mode = document.getElementById("presentationMode");
-            presentation__mode.classList.remove("hidden");
-            presentation__mode.classList.remove("hiddenLargeView");
-        },2400);
+        },1600);        
 
+        console.log('11111');
+        console.log(M);
         document.getElementById("presentationMode").onclick = function(e){
             e.preventDefault();
             console.log('aaa');
