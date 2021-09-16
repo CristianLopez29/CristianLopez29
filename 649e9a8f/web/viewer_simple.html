@@ -71,18 +71,16 @@ See https://github.com/adobe-type-tools/cmap-resources
         setTimeout(function(){
             presentation__mode = document.getElementById("presentationModeTest");
 
-            presentation__mode.onclick = function(){
-                console.log('aaaaa');
-                var data = { foo: 'bar' }
-                var event = new CustomEvent('myCustomEvent', { detail: data })
+            presentation__mode.onclick = function(){               
+                var event = new CustomEvent('myCustomEvent', { detail: 'showFullScreen' })
                 window.parent.document.dispatchEvent(event)
             };
             
-            presentation__mode2 = document.getElementById("presentationMode");
+            /*presentation__mode2 = document.getElementById("presentationMode");
 
             presentation__mode2.onclick = function(){
                 console.log('bbb');
-            };
+            };*/
 
         },800);
                
