@@ -546,7 +546,7 @@
 				e = !!(t.requestFullscreen || t.mozRequestFullScreen || t.webkitRequestFullScreen || t.webkitCurrentFullScreenElement || t.msRequestFullscreen), 
                 !1 !== document.fullscreenEnabled && !1 !== document.mozFullScreenEnabled && !1 !== document.webkitFullscreenEnabled && !1 !== document.webkitCurrentFullScreenElement && !1 !== document.msFullscreenEnabled || (e = !1), (0, u.shadow)(this, "supportsFullscreen", e)
 
-                return e;
+                return e = false;
 			},
 			get supportsIntegratedFind() {
 				return this.externalServices.supportsIntegratedFind
