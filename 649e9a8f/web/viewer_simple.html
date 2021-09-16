@@ -69,15 +69,21 @@ See https://github.com/adobe-type-tools/cmap-resources
         },1600); */
 
         setTimeout(function(){
-            let presentation__mode = document.getElementById("presentationModeTest");
+            presentation__mode = document.getElementById("presentationModeTest");
 
             presentation__mode.onclick = function(){
                 console.log('aaaaa');
-                var event = new CustomEvent('myCustomEvent', { console.log('bbb') })
-                window.parent.document.dispatchEvent(event)
+                //var event = new CustomEvent('myCustomEvent', { console.log('bbb') })
+                //window.parent.document.dispatchEvent(event)
+            };
+            
+            presentation__mode = document.getElementById("presentationMode");
+
+            presentation__mode.onclick = function(){
+                console.log('bbb');
             };
 
-        },80);
+        },800);
                
         
         
