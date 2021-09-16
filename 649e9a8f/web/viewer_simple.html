@@ -70,14 +70,15 @@ See https://github.com/adobe-type-tools/cmap-resources
 
         setTimeout(function(){
             presentation__mode = document.getElementById("presentationModeTest");
-
+            
+            fullScreen = 0;
             presentation__mode.onclick = function(){
-                if (fullScreen == 1){
+                if (fullScreen == 0){
                     fullScreenTxt = 'showFullScreen';
-                    fullScreen = 0;
+                    fullScreen = 1;
                 }else{
                    fullScreenTxt = 'hideFullScreen';
-                   fullScreen = 1;
+                   fullScreen = 0;
                 }    
                 var event = new CustomEvent('myCustomEvent', { detail: fullScreenTxt })
                 window.parent.document.dispatchEvent(event)
