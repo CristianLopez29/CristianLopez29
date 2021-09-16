@@ -560,7 +560,7 @@
 
                 console.log('documentwebkitCurrentFullScreenElement ', document.webkitCurrentFullScreenElement);
 
-                return e;
+                return e = true;
 			},
 			get supportsIntegratedFind() {
 				return this.externalServices.supportsIntegratedFind
