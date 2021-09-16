@@ -55,6 +55,11 @@ See https://github.com/adobe-type-tools/cmap-resources
             var presentation__mode = document.getElementById("presentationMode");
             presentation__mode.classList.remove("hidden");
             presentation__mode.classList.remove("hiddenLargeView");
+
+            document.getElementById("presentationMode").addEventListener("click", myFunction);
+            function myFunction() {
+                console.log('aaa');
+            }
         },800); 
 
         setTimeout(function(){
@@ -63,10 +68,7 @@ See https://github.com/adobe-type-tools/cmap-resources
             presentation__mode.classList.remove("hiddenLargeView");
         },1600);        
         
-        document.getElementById("presentationMode").addEventListener("click", myFunction);
-        function myFunction() {
-            console.log('aaa');
-        }
+        
     </script>
 </head>
 
