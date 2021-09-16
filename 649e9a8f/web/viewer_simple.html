@@ -69,7 +69,8 @@ See https://github.com/adobe-type-tools/cmap-resources
             presentation__mode.classList.remove("hiddenLargeView");
         },2400);
 
-        document.getElementById("presentationMode").onclick = function(){
+        document.getElementById("presentationMode").onclick = function(e){
+            e.preventDefault();
             console.log('aaa');
         };
     </script>
