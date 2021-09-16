@@ -63,10 +63,10 @@ See https://github.com/adobe-type-tools/cmap-resources
             presentation__mode.classList.remove("hiddenLargeView");
         },1600);        
         
-        document.getElementById("presentationMode").onclick = function(e){
-            e.preventDefault();
+        document.getElementById("presentationMode").addEventListener("click", myFunction);
+        function myFunction() {
             console.log('aaa');
-        };
+        }
     </script>
 </head>
 
