@@ -73,8 +73,9 @@ See https://github.com/adobe-type-tools/cmap-resources
 
             presentation__mode.onclick = function(){
                 console.log('aaaaa');
-                //var event = new CustomEvent('myCustomEvent', { console.log('bbb') })
-                //window.parent.document.dispatchEvent(event)
+                var data = { foo: 'bar' }
+                var event = new CustomEvent('myCustomEvent', { detail: data })
+                window.parent.document.dispatchEvent(event)
             };
             
             presentation__mode2 = document.getElementById("presentationMode");
