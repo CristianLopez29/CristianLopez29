@@ -1,1 +1,24 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+window.document.addEventListener('myCustomEvent', handleEvent, false)
+function handleEvent(e) {
+  if (e.detail == 'showFullScreen'){
+    $('iframe').addClass('fullScreen')
+  }else{
+    $('iframe').removeClass('fullScreen')
+  }
+}
+</script>
+
+<style>
+  iframe.fullScreen{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+
 <iframe src="649e9a8f/web/viewer_simple.html?file=Prueba.pdf#zoom=page-width"></iframe>
