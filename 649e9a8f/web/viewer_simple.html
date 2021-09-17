@@ -59,6 +59,7 @@ See https://github.com/adobe-type-tools/cmap-resources
         console.log('supportsFullscreen', supportsFullscreen)
         
         setTimeout(function(){
+            console.log('setTimeout 1')
             if (supportsFullscreen == false){                
                 var presentation__mode = document.getElementById("presentationMode");
                 presentation__mode.classList.remove("hidden");
@@ -80,6 +81,7 @@ See https://github.com/adobe-type-tools/cmap-resources
         },500);
 
         setTimeout(function(){
+            console.log('setTimeout 2')
             if (supportsFullscreen == false){                
                 var presentation__mode = document.getElementById("presentationMode");
                 presentation__mode.classList.remove("hidden");
