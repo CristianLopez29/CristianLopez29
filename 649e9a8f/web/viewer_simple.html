@@ -50,6 +50,13 @@ See https://github.com/adobe-type-tools/cmap-resources
   crossorigin="anonymous"></script>
 
     <script>
+        var supportsFullscreen = void 0,
+            t = document.documentElement;
+        
+        supportsFullscreen = !!(t.requestFullscreen || t.mozRequestFullScreen || t.webkitRequestFullScreen || t.webkitCurrentFullScreenElement || t.msRequestFullscreen), 
+            !1 !== document.fullscreenEnabled && !1 !== document.mozFullScreenEnabled && !1 !== document.webkitFullscreenEnabled && !1 !== document.webkitCurrentFullScreenElement && !1 !== document.msFullscreenEnabled || (e = !1), (0, u.shadow)(this, "supportsFullscreen", e)
+
+
         /*setTimeout(function(){
             var presentation__mode = document.getElementById("presentationMode");
             presentation__mode.classList.remove("hidden");
@@ -69,10 +76,7 @@ See https://github.com/adobe-type-tools/cmap-resources
         },1600); */
 
         setTimeout(function(){
-
-            supportsFullscreen = !!(t.requestFullscreen || t.mozRequestFullScreen || t.webkitRequestFullScreen || t.webkitCurrentFullScreenElement || t.msRequestFullscreen), 
-                !1 !== document.fullscreenEnabled && !1 !== document.mozFullScreenEnabled && !1 !== document.webkitFullscreenEnabled && !1 !== document.webkitCurrentFullScreenElement && !1 !== document.msFullscreenEnabled || (e = !1), (0, u.shadow)(this, "supportsFullscreen", e)
-
+            
             console.log(supportsFullscreen);
 
 
