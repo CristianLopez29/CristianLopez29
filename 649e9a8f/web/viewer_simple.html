@@ -56,10 +56,12 @@ See https://github.com/adobe-type-tools/cmap-resources
         supportsFullscreen = !!(t.requestFullscreen || t.mozRequestFullScreen || t.webkitRequestFullScreen || t.webkitCurrentFullScreenElement || t.msRequestFullscreen), 
             !1 !== document.fullscreenEnabled && !1 !== document.mozFullScreenEnabled && !1 !== document.webkitFullscreenEnabled && !1 !== document.webkitCurrentFullScreenElement && !1 !== document.msFullscreenEnabled || (e = !1)
         
+        console.log(supportsFullscreen);
 
         
         setTimeout(function(){
             if (supportsFullscreen == false){
+                console.log('setTimeout 1');
                 var presentation__mode = document.getElementById("presentationMode");
                 presentation__mode.classList.remove("hidden");
                 presentation__mode.classList.remove("hiddenLargeView");
@@ -81,6 +83,7 @@ See https://github.com/adobe-type-tools/cmap-resources
 
         setTimeout(function(){
             if (supportsFullscreen == false){
+                console.log('setTimeout 2');
                 var presentation__mode = document.getElementById("presentationMode");
                 presentation__mode.classList.remove("hidden");
                 presentation__mode.classList.remove("hiddenLargeView");
@@ -102,6 +105,8 @@ See https://github.com/adobe-type-tools/cmap-resources
 
         setTimeout(function(){
             if (supportsFullscreen == false){
+                console.log('setTimeout 3');
+
                 var presentation__mode = document.getElementById("presentationMode");
                 presentation__mode.classList.remove("hidden");
                 presentation__mode.classList.remove("hiddenLargeView");
