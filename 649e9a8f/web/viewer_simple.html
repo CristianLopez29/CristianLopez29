@@ -53,57 +53,73 @@ See https://github.com/adobe-type-tools/cmap-resources
         var supportsFullscreen = void 0,
             t = document.documentElement;
         
-        //supportsFullscreen = !!(t.requestFullscreen || t.mozRequestFullScreen || t.webkitRequestFullScreen || t.webkitCurrentFullScreenElement || t.msRequestFullscreen), 
-        //    !1 !== document.fullscreenEnabled && !1 !== document.mozFullScreenEnabled && !1 !== document.webkitFullscreenEnabled && !1 !== document.webkitCurrentFullScreenElement && !1 !== document.msFullscreenEnabled || (e = !1)
+        supportsFullscreen = !!(t.requestFullscreen || t.mozRequestFullScreen || t.webkitRequestFullScreen || t.webkitCurrentFullScreenElement || t.msRequestFullscreen), 
+            !1 !== document.fullscreenEnabled && !1 !== document.mozFullScreenEnabled && !1 !== document.webkitFullscreenEnabled && !1 !== document.webkitCurrentFullScreenElement && !1 !== document.msFullscreenEnabled || (e = !1)
         
 
         
-        /*setTimeout(function(){
-            var presentation__mode = document.getElementById("presentationMode");
-            presentation__mode.classList.remove("hidden");
-            presentation__mode.classList.remove("hiddenLargeView");
+        setTimeout(function(){
+            if (supportsFullscreen == false){
+                var presentation__mode = document.getElementById("presentationMode");
+                presentation__mode.classList.remove("hidden");
+                presentation__mode.classList.remove("hiddenLargeView");
+                
+                fullScreen = 0;
+                presentation__mode.onclick = function(){
+                    if (fullScreen == 0){
+                        fullScreenTxt = 'showFullScreen';
+                        fullScreen = 1;
+                    }else{
+                    fullScreenTxt = 'hideFullScreen';
+                    fullScreen = 0;
+                    }    
+                    var event = new CustomEvent('myCustomEvent', { detail: fullScreenTxt })
+                    window.parent.document.dispatchEvent(event)
+                };
+            }
         },80);
-        
-        setTimeout(function(){
-            var presentation__mode = document.getElementById("presentationMode");
-            presentation__mode.classList.remove("hidden");
-            presentation__mode.classList.remove("hiddenLargeView");
-        },800); 
-
-        setTimeout(function(){
-            var presentation__mode = document.getElementById("presentationMode");
-            presentation__mode.classList.remove("hidden");
-            presentation__mode.classList.remove("hiddenLargeView");
-        },1600); */
 
         setTimeout(function(){
             if (supportsFullscreen == false){
-                console.log("aaa");
+                var presentation__mode = document.getElementById("presentationMode");
+                presentation__mode.classList.remove("hidden");
+                presentation__mode.classList.remove("hiddenLargeView");
+                
+                fullScreen = 0;
+                presentation__mode.onclick = function(){
+                    if (fullScreen == 0){
+                        fullScreenTxt = 'showFullScreen';
+                        fullScreen = 1;
+                    }else{
+                    fullScreenTxt = 'hideFullScreen';
+                    fullScreen = 0;
+                    }    
+                    var event = new CustomEvent('myCustomEvent', { detail: fullScreenTxt })
+                    window.parent.document.dispatchEvent(event)
+                };
             }
-        
-            presentation__mode = document.getElementById("presentationModeTest");
-            
-            fullScreen = 0;
-            presentation__mode.onclick = function(){
-                if (fullScreen == 0){
-                    fullScreenTxt = 'showFullScreen';
-                    fullScreen = 1;
-                }else{
-                   fullScreenTxt = 'hideFullScreen';
-                   fullScreen = 0;
-                }    
-                var event = new CustomEvent('myCustomEvent', { detail: fullScreenTxt })
-                window.parent.document.dispatchEvent(event)
-            };
-            
-            /*presentation__mode2 = document.getElementById("presentationMode");
+        },600);
 
-            presentation__mode2.onclick = function(){
-                console.log('bbb');
-            };*/
-
-        },800);
-               
+        setTimeout(function(){
+            if (supportsFullscreen == false){
+                var presentation__mode = document.getElementById("presentationMode");
+                presentation__mode.classList.remove("hidden");
+                presentation__mode.classList.remove("hiddenLargeView");
+                
+                fullScreen = 0;
+                presentation__mode.onclick = function(){
+                    if (fullScreen == 0){
+                        fullScreenTxt = 'showFullScreen';
+                        fullScreen = 1;
+                    }else{
+                    fullScreenTxt = 'hideFullScreen';
+                    fullScreen = 0;
+                    }    
+                    var event = new CustomEvent('myCustomEvent', { detail: fullScreenTxt })
+                    window.parent.document.dispatchEvent(event)
+                };
+            }
+        },1400);                               
         
         
     </script>
