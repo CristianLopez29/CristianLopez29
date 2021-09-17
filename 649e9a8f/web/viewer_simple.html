@@ -56,7 +56,11 @@ See https://github.com/adobe-type-tools/cmap-resources
         supportsFullscreen = !!(t.requestFullscreen || t.mozRequestFullScreen || t.webkitRequestFullScreen || t.webkitCurrentFullScreenElement || t.msRequestFullscreen), 
             !1 !== document.fullscreenEnabled && !1 !== document.mozFullScreenEnabled && !1 !== document.webkitFullscreenEnabled && !1 !== document.webkitCurrentFullScreenElement && !1 !== document.msFullscreenEnabled || (e = !1)
 
-
+        supportsFullscreen = false;
+        
+        if (supportsFullscreen == false){
+            console.log("aaa");
+        }
         /*setTimeout(function(){
             var presentation__mode = document.getElementById("presentationMode");
             presentation__mode.classList.remove("hidden");
@@ -76,10 +80,7 @@ See https://github.com/adobe-type-tools/cmap-resources
         },1600); */
 
         setTimeout(function(){
-            
-            console.log(supportsFullscreen);
-
-
+        
             presentation__mode = document.getElementById("presentationModeTest");
             
             fullScreen = 0;
