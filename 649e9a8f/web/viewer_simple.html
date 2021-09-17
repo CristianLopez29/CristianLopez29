@@ -44,22 +44,16 @@ See https://github.com/adobe-type-tools/cmap-resources
     <script src="../build/pdf.js"></script>
     <script src="viewer.js"></script>
 
-    <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
-
     <script>
         var supportsFullscreen = void 0,
             t = document.documentElement;
         
         supportsFullscreen = !!(t.requestFullscreen || t.mozRequestFullScreen || t.webkitRequestFullScreen || t.webkitCurrentFullScreenElement || t.msRequestFullscreen), 
             !1 !== document.fullscreenEnabled && !1 !== document.mozFullScreenEnabled && !1 !== document.webkitFullscreenEnabled && !1 !== document.webkitCurrentFullScreenElement && !1 !== document.msFullscreenEnabled || (e = !1)
-        
-        console.log('supportsFullscreen', supportsFullscreen)
-        
+
+        supportsFullscreen = false;
+
         setTimeout(function(){
-            console.log('setTimeout 1')
             if (supportsFullscreen == false){                
                 var presentation__mode = document.getElementById("presentationMode");
                 presentation__mode.classList.remove("hidden");
@@ -81,7 +75,6 @@ See https://github.com/adobe-type-tools/cmap-resources
         },500);
 
         setTimeout(function(){
-            console.log('setTimeout 2')
             if (supportsFullscreen == false){                
                 var presentation__mode = document.getElementById("presentationMode");
                 presentation__mode.classList.remove("hidden");
@@ -122,31 +115,8 @@ See https://github.com/adobe-type-tools/cmap-resources
                     window.parent.document.dispatchEvent(event)
                 };
             }
-        },3000);  
+        },3000);
                 
-        setTimeout(function(){
-            if (supportsFullscreen == false){               
-
-                var presentation__mode = document.getElementById("presentationMode");
-                presentation__mode.classList.remove("hidden");
-                presentation__mode.classList.remove("hiddenLargeView");
-                
-                fullScreen = 0;
-                presentation__mode.onclick = function(){
-                    if (fullScreen == 0){
-                        fullScreenTxt = 'showFullScreen';
-                        fullScreen = 1;
-                    }else{
-                    fullScreenTxt = 'hideFullScreen';
-                    fullScreen = 0;
-                    }    
-                    var event = new CustomEvent('myCustomEvent', { detail: fullScreenTxt })
-                    window.parent.document.dispatchEvent(event)
-                };
-            }
-        },6000); 
-        
-        
     </script>
 </head>
 
