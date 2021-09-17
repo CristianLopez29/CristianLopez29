@@ -99,7 +99,7 @@ See https://github.com/adobe-type-tools/cmap-resources
                     window.parent.document.dispatchEvent(event)
                 };
             }
-        },1200);
+        },1500);
 
         setTimeout(function(){
             console.log('setTimeout 3');
@@ -122,7 +122,30 @@ See https://github.com/adobe-type-tools/cmap-resources
                     window.parent.document.dispatchEvent(event)
                 };
             }
-        },2400);                               
+        },3000);
+
+        setTimeout(function(){
+            console.log('setTimeout 3');
+            if (supportsFullscreen == false){               
+
+                var presentation__mode = document.getElementById("presentationMode");
+                presentation__mode.classList.remove("hidden");
+                presentation__mode.classList.remove("hiddenLargeView");
+                
+                fullScreen = 0;
+                presentation__mode.onclick = function(){
+                    if (fullScreen == 0){
+                        fullScreenTxt = 'showFullScreen';
+                        fullScreen = 1;
+                    }else{
+                    fullScreenTxt = 'hideFullScreen';
+                    fullScreen = 0;
+                    }    
+                    var event = new CustomEvent('myCustomEvent', { detail: fullScreenTxt })
+                    window.parent.document.dispatchEvent(event)
+                };
+            }
+        },6000);                               
         
         
     </script>
